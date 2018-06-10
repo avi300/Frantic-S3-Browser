@@ -20,6 +20,7 @@
 		<a id="logout" href="/">Logout</a>
 	</div>
 	<form id="login_form" action="" method="GET">
+		<div class="input_group"><label for="endpoint">S3 endpoint</label><input type="text" name="endpoint" id="endpoint" value="" /></div>
 		<div class="input_group"><label for="bucket">Bucket</label><input type="text" name="bucket" id="bucket" value="" /></div>
 		<div class="input_group"><label for="aws_access_key_id">Access ID</span><input type="text" name="aws_access_key_id" id="aws_access_key_id" value="" /></div>
 		<div class="input_group"><label for="aws_secret_access_key">Password</label><input type="text" name="aws_secret_access_key" id="aws_secret_access_key" value="" /></div>
@@ -41,7 +42,7 @@
 var frantics3browser = new FranticS3Browser;
 jQuery(document).ready(function(){
         // See http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region for a listing of proper s3_endpoints.
-	frantics3browser.init({'hash': location.hash, 'login_form': '#login_form', 'div_logout_form': '#div_logout_form', 'div_upload_form': '#upload', 'fileupload_field': '#fileupload', 'bucketlist': '#bucketlist', 'login_error': '#login_error', 's3_endpoint': 's3-eu-west-1.amazonaws.com'});
+	frantics3browser.init({'hash': location.hash, 'login_form': '#login_form', 'div_logout_form': '#div_logout_form', 'div_upload_form': '#upload', 'fileupload_field': '#fileupload', 'bucketlist': '#bucketlist', 'login_error': '#login_error', 's3_endpoint': '#endpoint'});
 });
 </script>
 
